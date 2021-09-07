@@ -16,6 +16,7 @@ import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { CustomizeTextComponent } from './component/customize-text/customize-text.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RainbowDirective } from './directives/rainbow.directive';
     NgStyleComponent,
     CustomizeTextComponent,
     HighlightDirective,
-    RainbowDirective
+    RainbowDirective,
+    DefaultImagePipe
   ],
   imports: [
     BrowserModule,
