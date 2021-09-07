@@ -12,6 +12,10 @@ import { ItemComponent } from './cv/item/item.component';
 import { ListComponent } from './cv/list/list.component';
 import { CvComponent } from './cv/cv/cv.component';
 import { CardDetailComponent } from './cv/card-detail/card-detail.component';
+import { NgStyleComponent } from './directives/ng-style/ng-style.component';
+import { CustomizeTextComponent } from './component/customize-text/customize-text.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { CardDetailComponent } from './cv/card-detail/card-detail.component';
     ItemComponent,
     ListComponent,
     CvComponent,
-    CardDetailComponent
+    CardDetailComponent,
+    NgStyleComponent,
+    CustomizeTextComponent,
+    HighlightDirective,
+    RainbowDirective
   ],
   imports: [
     BrowserModule,

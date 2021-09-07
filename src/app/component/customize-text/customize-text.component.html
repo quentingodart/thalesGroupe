@@ -1,0 +1,14 @@
+<p [ngStyle]="{color: color, fontSize: size + 'px', fontFamily: font}">Test</p>
+<div class="row">
+  <div class="col">
+    <input type="color" [(ngModel)]="color" class="form-control">
+  </div>
+  <div class="col">
+    <input type="number" [(ngModel)]="size" class="form-control">
+  </div>
+  <div class="col">
+    <select class="form-select" aria-label="Selection de Font" [(ngModel)]="font"  class="form-control">
+      <option *ngFor="let f of fontList" [value]="f">{{ f }}</option>
+    </select>
+  </div>
+</div>

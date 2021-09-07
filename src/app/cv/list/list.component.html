@@ -1,8 +1,5 @@
 <ol class="list-group">
-  <li class="list-group-item">
-    <app-item [cv]="cvs[0]" (selectedCv)="getSelectedCv($event)"></app-item>
-  </li>
-  <li class="list-group-item">
-    <app-item [cv]="cvs[1]" (selectedCv)="getSelectedCv($event)"></app-item>
+  <li class="list-group-item" *ngFor="let cv of cvs; let isOdd = odd" [ngClass]="{'list-group-item-primary': isOdd, 'list-group-item-secondary': !isOdd}">
+    <app-item [cv]="cv" (selectedCv)="getSelectedCv($event)"></app-item>
   </li>
 </ol>
