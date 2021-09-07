@@ -1,0 +1,4 @@
+<p [style.color]="divColor">Changement de couleur</p>
+<input type="color" [(ngModel)]="divColor"/>
+<div [style.backgroundColor]="divColor"></div>
+<button class="btn btn-danger" (click)="changeColor(defaultColor)">reset color</button>

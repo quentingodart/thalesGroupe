@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col">
+    <app-list (selectedCv)="getSelectedCv($event)"></app-list>
+  </div>
+  <div class="col">
+    <app-card-detail [cv]="selectedCv" ></app-card-detail>
+  </div>
+</div>
