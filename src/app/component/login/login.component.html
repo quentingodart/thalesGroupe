@@ -1,0 +1,19 @@
+<!-- <form #loginForm="ngForm">
+  Email : <input ngModel type="email" name="name" class="form-control" required email>
+  Password : <input ngModel type="password" name="password" class="form-control" minlength="6" required>
+  <button class="btn btn-primary" (click)="processForm(loginForm)" [disabled]="loginForm.form.invalid">Envoyer</button>
+</form> -->
+
+<form #loginForm="ngForm">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input #userEmail="ngModel" ngModel name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required email>
+    <p *ngIf="userEmail.dirty && userEmail.invalid">L'email n'est pas au bon format.</p>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input #userPassword="ngModel" ngModel name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" minlength="6" required>
+    <p *ngIf="userPassword.dirty && userPassword.invalid">Le mot de passe est incorrect. Il faut au minimun 6 caractères.</p>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="processForm(loginForm)" [disabled]="loginForm.form.invalid">Envoyer</button>
+</form>

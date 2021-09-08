@@ -1,0 +1,18 @@
+<!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" (click)="navigateTo('')">Accueil</a>
+    <a class="dropdown-item" (click)="navigateTo('cv')">Cv</a>
+    <a class="dropdown-item" (click)="navigateTo('color')">Color</a>
+  </div>
+</div>
+ -->
+
+ <select #routeSelect
+ (change)="navigate(routeSelect.value)"class="form-control">
+    <option class="dropdown-item" value="todo">Todo</option>
+    <option class="dropdown-item" value="cv">Cv</option>
+    <option class="dropdown-item" value="color">Color</option>
+ </select>
