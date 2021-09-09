@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col">
-    <app-list (selectedCv)="getSelectedCv($event)"></app-list>
+    <!-- <app-list (selectedCv)="getSelectedCv($event)"></app-list> -->
+    <app-list></app-list>
   </div>
   <div class="col">
     <app-card-detail [cv]="selectedCv" *ngIf="selectedCv != null"></app-card-detail>

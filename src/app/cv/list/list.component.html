@@ -1,5 +1,7 @@
 <ol class="list-group">
   <li class="list-group-item" *ngFor="let cv of cvs; let isOdd = odd" [ngClass]="{'list-group-item-primary': isOdd, 'list-group-item-secondary': !isOdd}">
-    <app-item [cv]="cv" (selectedCv)="getSelectedCv($event)"></app-item>
+    <!-- <app-item [cv]="cv" (selectedCv)="getSelectedCv($event)"></app-item> -->
+    <app-item [cv]="cv"></app-item>
   </li>
+  <button class="btn btn-primary" [routerLink]="['/cv/add']">Ajouter un nouveau CV</button>
 </ol>

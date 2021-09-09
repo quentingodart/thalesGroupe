@@ -12,17 +12,18 @@ export class CvComponent implements OnInit {
 
   selectedCv = null;
 
-  constructor(private toastr : ToastrService) {
+  constructor(private toastr : ToastrService, private cvService : CvService) {
 
   }
 
   ngOnInit(): void {
+    this.cvService.selectCvSubject.subscribe((newCv) => (this.selectedCv = newCv));
     this.toastr.info('Bienvenue sur notre CvTech');
   }
 
 
-  getSelectedCv(selectedCv : Cv) {
+/*   getSelectedCv(selectedCv : Cv) {
     this.selectedCv = selectedCv;
-  }
+  } */
 
 }

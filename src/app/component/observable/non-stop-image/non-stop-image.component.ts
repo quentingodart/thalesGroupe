@@ -9,6 +9,11 @@ import { Observable } from 'rxjs';
 export class NonStopImageComponent implements OnInit {
 
   @Input() imgs = [];
+  @Input() timer = 1500;
+  @Input() isRounded = true;
+  @Input() height = 150;
+  @Input() width = 150;
+
   img = "";
 
   constructor() {
@@ -18,7 +23,6 @@ export class NonStopImageComponent implements OnInit {
   ngOnInit(): void {
     const observable = new Observable((obs) => {
       let i = this.imgs.length;
-      console.log('length : ' + i);
       setInterval(() => {
         if (!i) {
           i = this.imgs.length;
@@ -28,7 +32,6 @@ export class NonStopImageComponent implements OnInit {
     });
     observable.subscribe((val : number) => {
       this.img = this.imgs[val - 1];
-      console.log('path : ' + this.img);
     })
   }
 

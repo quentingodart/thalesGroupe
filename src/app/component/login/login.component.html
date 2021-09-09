@@ -12,7 +12,7 @@
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input #userPassword="ngModel" ngModel name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" minlength="6" required>
+    <input #userPassword="ngModel" ngModel name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" minlength="4" required>
     <p *ngIf="userPassword.dirty && userPassword.invalid">Le mot de passe est incorrect. Il faut au minimun 6 caractères.</p>
   </div>
   <button type="submit" class="btn btn-primary" (click)="processForm(loginForm)" [disabled]="loginForm.form.invalid">Envoyer</button>

@@ -1,8 +1,11 @@
+import { AuthInterceptorProvider } from './auth/interceptors/auth.interceptor';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,6 +33,8 @@ import { NotFoundComponent } from './component/not-found/not-found.component';
 import { TestFormComponent } from './component/form/test-form/test-form.component';
 import { LoginComponent } from './component/login/login.component';
 import { NonStopImageComponent } from './component/observable/non-stop-image/non-stop-image.component';
+import { TestHttpComponent } from './component/test-http/test-http.component';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 
 @NgModule({
   declarations: [
@@ -57,16 +62,19 @@ import { NonStopImageComponent } from './component/observable/non-stop-image/non
     NotFoundComponent,
     TestFormComponent,
     LoginComponent,
-    NonStopImageComponent
+    NonStopImageComponent,
+    TestHttpComponent,
+    AddPersonneComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot() // ToastrModule added
+    ToastrModule.forRoot(), // ToastrModule added
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

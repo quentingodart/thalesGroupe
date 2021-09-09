@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Cv } from '../model/cv.model';
+import { CvService } from '../services/cv.service';
 
 @Component({
   selector: 'app-item',
@@ -10,15 +11,19 @@ export class ItemComponent implements OnInit {
   @Input() cv: Cv = null;
   @Input() size = 50;
   @Input() isRounded = true;
-  @Output() selectedCv = new EventEmitter();
+/*   @Output() selectedCv = new EventEmitter(); */
 
-  constructor() { }
+  constructor(private cvService : CvService) { }
 
   ngOnInit(): void {
   }
 
-  emitSelectedCv() {
+  /* emitSelectedCv() {
     this.selectedCv.emit(this.cv);
   }
+ */
 
+  setSelectedCv() {
+    this.cvService.actualSelectedCv(this.cv);
+  }
 }
